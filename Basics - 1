@@ -8,3 +8,5 @@ SELECT WHERE FROM
 
 #If I want to retrieve data from an existing table
 SELECT * FROM tablename
+#If I want to select certain columns or fields(like ID, name, birthday etc)
+SELECT ID, Name FROM tablename
