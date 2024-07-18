@@ -6,3 +6,5 @@ Select, Where, From
 SELECT WHERE FROM
 'string' 
 
+#If I want to retrieve data from an existing table
+SELECT * FROM tablename
