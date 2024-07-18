@@ -11,5 +11,7 @@ SELECT * FROM tablename
 #If I want to select certain columns or fields(like ID, name, birthday etc)
 SELECT ID, Name FROM tablename
 
+
+[Record; Rows]
 SELECT * FROM tablename WHERE height >= 24
 SELECT * FROM tablename WHERE player_name = 'TOm lee';
