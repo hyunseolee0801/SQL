@@ -15,3 +15,7 @@ SELECT ID, Name FROM tablename
 [Record; Rows]
 SELECT * FROM tablename WHERE height >= 24
 SELECT * FROM tablename WHERE player_name = 'TOm lee';
+
+
+[Primary Keys] 
+CONSTRAINT nameofconstraint PRIMARY KEY(specify column or columns);
