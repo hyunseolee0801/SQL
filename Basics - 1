@@ -26,7 +26,17 @@ CREATE TABLE Employee_Skill (
 )
 
 [Primary Keys] 
-CONSTRAINT nameofconstraint PRIMARY KEY(specify column or columns);
+CONSTRAINT nameofconstraint PRIMARY KEY(employee_id);
 
 [Composite Primary Keys] 
+CONSTRAINT PK_Employee_Skill PRIMARY KEY(employee_id, skill_id)
+
+[Foreign Key] 
+CONSTRAINT PK_Employee_Skill PRIMARY KEY(employee_id, skill_id),
+CONSTRAINT FK_Skill FOREIGN KEY(employee_id) REFERENCES Skill(skill_id),  #Skill table must already exist
+CONSTRAINT FK_Employee FOREIGN KEY(employee_id) REFERENCES Employee(employee_id)
+
+[Cascade] 
+
+
 
