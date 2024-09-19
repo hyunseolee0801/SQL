@@ -40,3 +40,18 @@ CONSTRAINT FK_Employee FOREIGN KEY(employee_id) REFERENCES Employee(employee_id)
 
 
 
+
+
+
+
+-------------------------------------------------------
+09/19/2024 
+Running through W3school
+
+SELECT * FROM Orders WHERE amount NOT IN (250,400);
+INSERT INTO Orders VALUES (7, 'Gaming Chair', 20000, 5);
+SELECT * FROM Orders;
+DELETE FROM Orders WHERE order_id=6;
+
+
+
