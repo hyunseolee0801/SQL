@@ -53,5 +53,69 @@ INSERT INTO Orders VALUES (7, 'Gaming Chair', 20000, 5);
 SELECT * FROM Orders;
 DELETE FROM Orders WHERE order_id=6;
 
+--------------------------------------------------------
+09/21/2024
+
+CREATE TABLE Customers(
+  customer_id int NOT NULL PRIMARY KEY,
+  first_name varchar(255),
+  last_name varchar(255),
+  age int,
+  country varchar(255)
+  );
+
+INSERT INTO Customers VALUES(1, 'John', 'Doe', 31, 'USA');
+INSERT INTO Customers VALUES(2, 'Robert', 'Luna', 22, 'Russia');
+INSERT INTO Customers VALUES(3, 'David', 'Robinson', 23, 'UK');
+INSERT INTO Customers VALUES(4, 'John', 'Reinhardt', 25, 'Swiss');
+INSERT INTO Customers VALUES(5, 'Betty', 'Doe', 28, 'UAE');
+  
+
+CREATE TABLE Orders(
+  order_id int NOT NULL PRIMARY KEY,
+  item varchar(255),
+  amount int,
+  customer_id int NOT NULL,
+  FOREIGN KEY(customer_id) REFERENCES Customers(customer_id)
+  );
+
+INSERT INTO Orders VALUES(1, 'Keyboard', 400, 4);
+INSERT INTO Orders VALUES(2, 'Mouse', 300, 4);
+INSERT INTO Orders VALUES(3, 'Monitor', 12000, 3);
+INSERT INTO Orders VALUES(4, 'Keyboard', 400, 1);
+INSERT INTO Orders VALUES(5, 'Mousepad', 250, 2);
+
+CREATE TABLE Shippings(
+  shipping_id int NOT NULL PRIMARY KEY,
+  status varchar(255),
+  customer int
+  );
+
+INSERT INTO Shippings VALUES(1, 'Pending', 2);
+INSERT INTO Shippings VALUES(2, 'Pending', 4);
+INSERT INTO Shippings VALUES(3, 'Delivered', 3);
+INSERT INTO Shippings VALUES(4, 'Pending', 5);
+INSERT INTO Shippings VALUES(5, 'Delivered', 1);
+
+SELECT * from Customers;
+select * from Orders;
+select * from Shippings;
+
+SELECT Customers.last_name, Customers.country, Orders.item, Orders.amount
+from Customers
+inner join Customers ON Customers.customer_id = Orders.customer_id;
+*****/
 
 
+Innerjoin and Left Join 
+
+
+
+
+SELECT * FROM Customers;
+SELECT * FROM Orders;
+
+SELECT Customers.last_name, Orders.item
+FROM Customers
+LEFT JOIN Orders
+ON Customers.customer_id = Orders.customer_id;
